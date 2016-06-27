@@ -17,3 +17,5 @@ vault:
   - -config=/config/config.hcl
   volumes:
   - /config
+  external_links:
+  - ${consul_service}:consul

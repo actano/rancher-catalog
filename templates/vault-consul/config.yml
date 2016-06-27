@@ -1,6 +1,6 @@
-name: "Vault"
+name: "Vault-Consult"
 description: |
-  Vault credential store from HashiCorp.
+  Vault credential store from HashiCorp based on Consul as backend.
 version: "1.0.0"
 category: "Security"
 maintainer: "thrucker"

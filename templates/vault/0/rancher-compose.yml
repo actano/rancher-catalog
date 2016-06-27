@@ -15,6 +15,10 @@ vault:
   scale: 1
   metadata:
     config.hcl: |
+      backend "file" {
+        path = "/data"
+      }
+
       listener "tcp" {
         address = "0.0.0.0:${vault_port}"
         tls_disable = 1

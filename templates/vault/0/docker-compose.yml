@@ -19,4 +19,4 @@ vault:
   - -config=/config/config.hcl
   volumes:
   - /config
-  - /data
+  - vault-data:/data

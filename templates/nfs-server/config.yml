@@ -1,6 +1,6 @@
 name: "nfs-server"
 description: "a nfs server"
-version: "1.0.0-rancher1"
+version: "1.0.0-rancher2"
 category: "Storage"
 maintainer: "Actano RPLAN Next Team"
 license: "custom"

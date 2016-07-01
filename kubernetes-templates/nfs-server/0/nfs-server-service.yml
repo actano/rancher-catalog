@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ${RC_NAME}
+spec:
+  ports:
+    - name: nfs
+      port: 2049
+  selector:
+    role: ${RC_NAME}

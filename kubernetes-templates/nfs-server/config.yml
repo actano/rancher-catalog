@@ -1,0 +1,6 @@
+name: 'nfs-server'
+description: 'a dockerized nfs server'
+version: '1.0.0-rancher1'
+category: 'Storage'
+maintainer: 'Actano RPLAN Next Team'
+license: 'custom'

@@ -1,0 +1,28 @@
+.catalog:
+  name: 'nfs-server'
+  version: '1.0.0-rancher1'
+  description: 'a dockerized nfs server'
+  minimum_rancher_version: '1.0.2'
+  questions:
+    - variable: 'RC_NAME'
+      label: 'Service Name'
+      description: 'The name to use for the service and replication controller'
+      required: true
+      type: 'string'
+      default: 'nfs-server'
+    - variable: 'HOST_PATH'
+      label: 'Persistent Host Path'
+      description: 'The host path to store the persistent volume at'
+      required: true
+      type: 'string'
+      default: '/state/nfs'
+    - variable: 'NODE_SELECTOR_KEY'
+      label: 'Node Selector Key'
+      required: true
+      type: 'string'
+      default: 'actano.de/nfs-persistent-state'
+    - variable: 'NODE_SELECTOR_VALUE'
+      label: 'Node Selector Key'
+      required: true
+      type: 'string'
+      default: 'true'

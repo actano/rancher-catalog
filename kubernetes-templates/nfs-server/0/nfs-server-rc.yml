@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nfs-server
+spec:
+  replicas: 1
+  selector:
+    role: ${RC_NAME}
+  template:
+    metadata:
+      labels:
+        role: ${RC_NAME}
+    spec:
+      containers:
+      - name: ${RC_NAME}
+        image: erezhorev/dockerized_nfs_server:latest
+        ports:
+          - name: nfs
+            containerPort: 2049
+        securityContext:
+          privileged: true
+        volumeMounts:
+          - mountPath: /exports
+            name: nfs-state
+      volumes:
+        - name: nfs-state
+          hostPath:
+            path: ${HOST_PATH}
+            path: /data/nfs-state
+      nodeSelector:
+        ${NODE_SELECTOR_KEY}: '${NODE_SELECTOR_VALUE}'

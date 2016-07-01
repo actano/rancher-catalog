@@ -1,0 +1,94 @@
+.catalog:
+  name: Jenkins
+  version: "1.0.0"
+  description: Jenkins CI
+  minimum_rancher_version: "1.0.2"
+  questions:
+    - variable: SERVICE_PORT
+      label: Service Port
+      description: |
+        The port at which the Jenkins service shall me made accessible.
+      type: int
+      required: true
+      default: 8080
+    - variable: COUCHBASE_VERSION
+      label: Couchbase version
+      description: |
+        Couchbase version, i.e. the tag of the Couchbase docker image.
+      type: string
+      required: false
+      default: community-4.0.0
+    - variable: CHROME_VERSION
+      label: Chrome version
+      description: |
+        Chrome version, i.e. the tag of the Selenium Chrome node docker image.
+      type: string
+      required: false
+      default: "2.47.1"
+    - variable: FIREFOX_VERSION
+      label: Firefox version
+      description: |
+        Firefox version, i.e. the tag of the Selenium Firefox node docker image.
+      type: string
+      required: false
+      default: "2.48.2"
+    - variable: HTTPMOCK_VERSION
+      label: HTTP mock version
+      description: |
+        HTTP mock version, i.e. the tag of the HTTP mock docker image.
+      type: string
+      required: false
+      default: "1.3.0-1"
+    - variable: THROTTLE_COUCHBASE
+      label: Couchbase throttle
+      description: |
+        The number of concurrent jobs which use Couchbase.
+      type: int
+      required: false
+      default: 10
+    - variable: COUCHBASE_MAX_BUCKET_COUNT
+      label: Couchbase max. bucket count
+      description: |
+        The maximal allowed number of Couchbase buckets.
+      type: int
+      required: false
+      default: 100
+    - variable: BROWSER_SCALE
+      label: browser scale
+      description: |
+        The number of browser instances of each type which will be provided.
+      type: int
+      required: false
+      default: 2
+    - variable: NUM_EXECUTORS
+      label: number of executors
+      description: |
+        The number of job executors.
+      type: int
+      required: false
+      default: 10
+    - variable: JENKINS_EMAIL
+      label: Jenkins email address
+      description: |
+        The email address which Jenkins uses for sending mails.
+      type: string
+      required: false
+      default: jenkins@actano.de
+    - variable: JENKINS_URL
+      label: Jenkins URL
+      description: |
+        The URL at which Jenkins is accessible.
+      type: string
+      required: true
+    - variable: SLACK_TEAM_DOMAIN
+      label: Slack team domain
+      type: string
+      required: false
+      default: actano
+    - variable: SLACK_CHANNEL
+      label: Slack channel
+      description: |
+        The Slack channel to which Jenkins shall report the build status.
+      type: string
+      required: false
+      default: "#jenkins"

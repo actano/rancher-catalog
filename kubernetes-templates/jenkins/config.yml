@@ -1,0 +1,7 @@
+name: Jenkins
+description: |
+  Jenkins CI
+version: "1.0.0"
+category: CI
+maintainer: thrucker
+license: custom

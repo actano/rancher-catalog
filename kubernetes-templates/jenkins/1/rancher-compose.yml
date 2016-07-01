@@ -12,7 +12,7 @@
       required: true
       default: 8080
     - variable: NFS_IP
-      lable: NFS IP address
+      label: NFS IP address
       description: |
           IP address of the NFS for storing Jenkins state.
       type: string

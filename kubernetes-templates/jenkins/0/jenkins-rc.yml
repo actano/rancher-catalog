@@ -29,29 +29,29 @@ spec:
               mountPath: /var/jenkins_home/users
           env:
             - name: THROTTLE_COUCHBASE
-              value: ${THROTTLE_COUCHBASE}
+              value: "${THROTTLE_COUCHBASE}"
             - name: JENKINS_VAR_couchbase__maxBucketCount
-              value: ${COUCHBASE_MAX_BUCKET_COUNT}
+              value: "${COUCHBASE_MAX_BUCKET_COUNT}"
             - name: JENKINS_VAR_BROWSER_SCALE
-              value: ${BROWSER_SCALE}
+              value: "${BROWSER_SCALE}"
             - name: JENKINS_NUM_EXECUTORS
-              value: ${NUM_EXECUTORS}
+              value: "${NUM_EXECUTORS}"
             - name: JENKINS_EMAIL
-              value: ${JENKINS_EMAIL}
+              value: "${JENKINS_EMAIL}"
             - name: JENKINS_URL
-              value: ${JENKINS_URL}
+              value: "${JENKINS_URL}"
             - name: JENKINS_VAR_COUCHBASE_VERSION
-              value: ${COUCHBASE_VERSION}
+              value: "${COUCHBASE_VERSION}"
             - name: JENKINS_VAR_CHROME_VERSION
-              value: ${CHROME_VERSION}
+              value: "${CHROME_VERSION}"
             - name: JENKINS_VAR_FIREFOX_VERSION
-              value: ${FIREFOX_VERSION}
+              value: "${FIREFOX_VERSION}"
             - name: JENKINS_VAR_HTTPMOCK_VERSION
-              value: ${HTTPMOCK_VERSION}
+              value: "${HTTPMOCK_VERSION}"
             - name: SLACK_TEAM_DOMAIN
-              value: ${SLACK_TEAM_DOMAIN}
+              value: "${SLACK_TEAM_DOMAIN}"
             - name: SLACK_ROOM
-              value: ${SLACK_CHANNEL}
+              value: "${SLACK_CHANNEL}"
       volumes:
         - name: docker-sock
           hostPath:

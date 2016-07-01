@@ -26,6 +26,5 @@ spec:
         - name: nfs-state
           hostPath:
             path: ${HOST_PATH}
-            path: /data/nfs-state
       nodeSelector:
         ${NODE_SELECTOR_KEY}: '${NODE_SELECTOR_VALUE}'

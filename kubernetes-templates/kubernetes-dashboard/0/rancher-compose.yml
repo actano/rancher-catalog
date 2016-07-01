@@ -1,0 +1,5 @@
+.catalog:
+  name: 'kubernetes-dashboard'
+  version: '1.1.0-rancher1'
+  description: 'the kubernetes dashboard'
+  minimum_rancher_version: 1.0.2
